@@ -1,0 +1,11 @@
+.flex_col {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: 500px) and (max-width: 799px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+  }
+}

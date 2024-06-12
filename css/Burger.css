@@ -5,7 +5,7 @@ ul {
   margin-left: 0%;
   padding: 0;
   box-sizing: border-box;
-  background-color: white;
+  background-color: f8e9e9;
   z-index: 1;
 }
 li {
@@ -42,17 +42,15 @@ h1_tema2 {
   transition: all 0.3s ease-in-out;
   background-color: #101010;
 }
-/* ... go gøres usynlig */
-/* step 5 */
+
 .hamburger {
   display: none;
 }
 
-/* Styling af menuen */
-/* step 6 */
 .nav-menu {
   display: flex;
   justify-content: space-between;
+  background-color: white;
 }
 
 .nav-item {
@@ -82,7 +80,7 @@ h1_tema2 {
     left: -100%;
     top: 5rem;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #ffff;
     width: 100%;
     border-radius: 10px;
     text-align: center;

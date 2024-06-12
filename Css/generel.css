@@ -1,6 +1,7 @@
 body {
   max-width: 1100px;
   margin: 0 auto;
+  background-color: fffff;
 }
 
 .navbar {
@@ -42,20 +43,54 @@ main {
   padding: 20px;
 }
 
+grid-1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 h2 {
-  color: #b89191;
+  color: #413131;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: normal;
   display: flex;
   align-items: center;
   .line {
-    background-color: antiquewhite;
+    background-color: #413131;
     flex: 1;
     height: 1px;
     margin: 0 15px;
     align-self: center;
   }
+}
+
+.p {
+  max-width: 65ch;
+  line-height: 1.8;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h3 {
+  max-width: 65ch;
+  line-height: 1.8;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #413131;
+}
+
+.text {
+  max-width: 100%;
+  line-height: 1.8;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.indhold {
+  max-width: 65ch;
+  line-height: 1.8;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .sektion1 {
@@ -89,19 +124,6 @@ h2 {
   height: auto;
 }
 
-.text {
-  max-width: 100%; /* Sikrer at teksten fylder hele bredden */
-  line-height: 1.8;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-.indhold {
-  max-width: 65ch; /* Sikrer at teksten fylder hele bredden */
-  line-height: 1.8;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
 @media (min-width: 768px) {
   .content {
     display: flex;
@@ -121,22 +143,27 @@ h2 {
   }
 }
 
-h3 {
-  font-family: Arial, Helvetica, sans-serif;
-}
 nav-item {
   font-size: medium;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .button-link {
-  display: inline-block; /* Gør linket til en inline-blok, så padding virker */
-  padding: 20px 50px; /* Tilføj indvendig afstand til knappen */
+  display: block;
+  padding: 10px 20px; /* Tilføj indvendig afstand til knappen */
   background-color: #dacdcd; /* Blå baggrundsfarve */
   color: rgb(0, 0, 0); /* Hvid tekstfarve */
-  text-decoration: none; /* Fjern understregning */
-  border-radius: 0px; /* Gør hjørnerne rundede */
+  text-decoration: none;
+  border-radius: 3px; /* Gør hjørnerne rundede */
   transition: background-color 0.3s; /* Tilføj en glidende effekt ved hover */
+}
+.button-container {
+  display: flex;
+  gap: 10px; /* Juster afstanden mellem knapperne */
+  margin-bottom: 10px; /* Juster afstanden mellem rækkerne */
+}
+.single-button-container {
+  margin-top: 100px; /* Juster afstanden mellem rækkerne */
 }
 
 .button-link:hover {
@@ -147,4 +174,46 @@ nav-item {
 section {
   margin: 50px 0; /* Tilføj mellemrum mellem sektionerne */
   padding: 20px; /* Tilføj indvendig afstand til sektionerne */
+}
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8/3.5;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.text,
+.video {
+  margin-bottom: 20px;
+}
+
+.video iframe {
+  width: 100%;
+  height: auto;
+}
+
+/* Styling for larger screens */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .text,
+  .video {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .text {
+    margin-right: 20px;
+  }
+
+  .video iframe {
+    height: 315px; /* Fix the height to match the aspect ratio */
+  }
 }
